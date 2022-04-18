@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<AnchorPane fx:id="anchorPane" prefHeight="250.0" prefWidth="520.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.folderlockerui.MainController">
+
+   <children>
+      <MenuBar layoutY="2.0" prefHeight="26.0" prefWidth="351.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <Button fx:id="singleFileChooseBtn" layoutX="14.0" layoutY="32.0" mnemonicParsing="false" onAction="#SingleFileChooser" prefHeight="18.0" prefWidth="100.0" text="Choose a file" AnchorPane.leftAnchor="12.0" AnchorPane.topAnchor="32.0" />
+      <Label fx:id="singleFileLab" layoutX="270.0" layoutY="34.0" prefHeight="26.0" prefWidth="261.0" AnchorPane.leftAnchor="250.0" AnchorPane.topAnchor="34.0" />
+      <Button fx:id="singleDirChooseBtn" layoutX="140.0" layoutY="34.0" mnemonicParsing="false" onAction="#SingleDirChooser" prefHeight="26.0" prefWidth="100.0" text="Choose a folder" AnchorPane.leftAnchor="130.0" AnchorPane.topAnchor="32.0" />
+      <PasswordField fx:id="password" layoutX="14.0" layoutY="138.0" promptText="Enter Password" visible="false" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" />
+      <Button fx:id="EncryptBtn" layoutX="406.0" layoutY="210.0" mnemonicParsing="false" onAction="#EncryptDecrypt" text="Encrypt/Decrypt" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="12.0" />
+      <Label fx:id="outputLabel" layoutX="406.0" layoutY="185.0" prefHeight="18.0" prefWidth="100.0" AnchorPane.bottomAnchor="46.6" />
+      <TextField fx:id="newPassword" layoutX="14.0" layoutY="138.0" promptText="New Password" visible="false" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" />
+      <Button fx:id="hideBtn" layoutX="274.0" layoutY="210.0" mnemonicParsing="false" onAction="#SetHideFolder" prefHeight="26.0" prefWidth="51.0" text="Hide" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="200.0" />
+      <Button fx:id="zipBtn" layoutX="329.0" layoutY="210.0" mnemonicParsing="false" onAction="#ZipUnzip" prefHeight="26.0" prefWidth="72.0" text="Zip/Unzip" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="120.0" />
+      <ListView fx:id="fileListView" editable="true" layoutX="12.0" layoutY="67.0" prefHeight="136.0" prefWidth="495.0" AnchorPane.bottomAnchor="70.0" AnchorPane.leftAnchor="12.0" AnchorPane.rightAnchor="12.0" AnchorPane.topAnchor="70.0" />
+   </children>
+</AnchorPane>
